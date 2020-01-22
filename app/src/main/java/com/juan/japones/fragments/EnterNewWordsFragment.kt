@@ -83,7 +83,7 @@ class EnterNewWordsFragment(context: Context,_db:RoomDatabaseClass) : Fragment()
                     Toast.makeText(context,"Entrada no valida",Toast.LENGTH_SHORT).show()
             }
         })
-       // enterIt()
+//        enterIt()
         return view
     }
 

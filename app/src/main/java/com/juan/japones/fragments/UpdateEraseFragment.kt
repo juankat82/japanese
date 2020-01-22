@@ -56,32 +56,37 @@ class UpdateEraseFragment (_context:Context, _db: RoomDatabaseClass): Fragment()
 
 
         updateButton = v.findViewById(R.id.modify_entry_button)
-        updateButton!!.setOnClickListener{
+        updateButton!!.setOnClickListener {
             val checkList = adapter!!.getCheckList()
 
-           // var lstBool = adapter!!.getCheckList()
+            // var lstBool = adapter!!.getCheckList()
 
             if (!adapter!!.getCheckList().contains(true))
-                Toast.makeText(context,"No se ha seleccionado ningun indice",Toast.LENGTH_SHORT).show()
-            else
-                AlertDialog.Builder(context!!).
-                    setTitle(getString(R.string.modify_word_string)).
-                    setMessage(getString(R.string.wanna_modify)).
-                    setNegativeButton(getString(R.string.no),null).
-                    setPositiveButton(getString(R.string.yes),{ _dialog, _which ->
-                        for (i in checkList.indices)
-                        {
-                            if (checkList[i] == true)
+                Toast.makeText(context, "No se ha seleccionado ningun indice", Toast.LENGTH_SHORT).show()
+            else {
+                AlertDialog.Builder(context!!).setTitle(getString(R.string.modify_word_string))
+                    .setMessage(getString(R.string.wanna_modify))
+                    .setNegativeButton(getString(R.string.no), null)
+                    .setPositiveButton(getString(R.string.yes), { _dialog, _which ->
+                        for (i in checkList.indices) {
+                            //counts how many items are visible in the recyclerview
+                            var divider = 0
+                            for (j in 0..20)
                             {
-                                val dialog = CustomDialogFragment.getInstance(db,list!![i],i)
-                                dialog.setTargetFragment(this,REQUEST_DIALOG_DATA)
-                                dialog.show(fragmentManager!!,"show_custom_dialog")
-                                recyclerView!!.getChildAt(i).check_box.isChecked = false
+                                if (recyclerView!!.getChildAt(j) != null)
+                                    divider = j
+                            }
+
+                            if (checkList[i] == true) {
+                                val dialog = CustomDialogFragment.getInstance(db, list!![i], i)
+                                dialog.setTargetFragment(this, REQUEST_DIALOG_DATA)
+                                dialog.show(fragmentManager!!, "show_custom_dialog")
+                                recyclerView!!.getChildAt(i%divider).check_box.isChecked = false
                                 pos = i
                             }
                         }
                     }).show()
-
+            }
 
         }
 
