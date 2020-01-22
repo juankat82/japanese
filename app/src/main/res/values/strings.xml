@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Japones</string>
+    <string name="start_guessing_string">Comienza a adivinar!</string>
+    <string name="add_new_words_string">Anadir palabra nueva</string>
+    <string name="hint_word_definition">Introduzca definicion</string>
+    <string name="hint_word_meaning">Introduzca significado</string>
+    <string name="add_word_to_dictionary">Anadir palabra</string>
+    <string name="how_many_questions_string">Cuantas preguntas:</string>
+    <string name="start_text">Comenzar!</string>
+    <string name="ten">10</string>
+    <string name="finish_string">Terminar</string>
+    <string name="answer_here">Escribe tu respuesta</string>
+    <string name="erase_word">Borrar/Modificar Palabras</string>
+    <string name="erase_chosen_word">BORRAR</string>
+    <string name="erase_all">BORRAR TODO</string>
+    <string name="are_you_sure_string">Estas Seguro?</string>
+    <string name="borrar_todo_string">Borrar Todas las Palabras</string>
+    <string name="borrar_string">Borrar palabras</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="modify_word_string">MODIFICAR</string>
+    <string name="update_done">Actualizado!</string>
+    <string name="wanna_modify">MODIFICAR PALABRA</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+</resources>
