@@ -1,5 +1,6 @@
 # japanese
-A KOTLIN AND FOR ANDROID little dictionary-like, matching game to learn vocabulary in japanese using romaji (japanese to spanish)
+A KOTLIN AND FOR ANDROID little dictionary-like, matching game to learn vocabulary in japanese using romaji (japanese to spanish).
+I USE SPANISH ON THE APP BUT ITS ACTUALLY A WORD-MATCHING APP
 
 Its a game where you add a word (i entered a small amount of spanish words) to translate into japanese (using latin letters,
 romaji) and a meaning for that word.
@@ -17,3 +18,7 @@ The class located in "com.juan.japones.fragments" and named "EnterNewWordsFragme
  Now stop the app, comment the method and its calling again and restart the app. From now on, you can add them 
  manually straight in the app or add more words in the same format used in the "enterIt()" method and after erasing the database,
   you can add everything again with your addons.
+
+
+
+Contains a bug that will make the app crash after erasing selected wors and trying to select new ones. This is due to the system not knowing the new number of elements on the list. 
